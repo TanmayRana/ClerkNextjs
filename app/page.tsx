@@ -8,7 +8,6 @@ const page = async () => {
   return (
     <div>
       <Trpage />
-      <SignedOut />
     </div>
   );
 };
