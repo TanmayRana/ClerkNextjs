@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { SignedOut, SignOutButton, useAuth, useUser } from "@clerk/nextjs";
+import {
+  SignedOut,
+  SignOutButton,
+  useAuth,
+  UserButton,
+  useUser,
+} from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,6 +36,9 @@ const Trpage = () => {
         alt="userimage"
       /> */}
       {user?.externalAccounts[0].imageUrl}
+      <div className="ml-5 ">
+        <UserButton />
+      </div>
       <SignOutButton>
         <button>Sign out</button>
       </SignOutButton>
